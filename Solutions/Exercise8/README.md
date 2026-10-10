@@ -113,10 +113,10 @@ Real output from this machine (UI on 8081 because 8080 was taken):
   docker: Docker version 29.6.1
   GITHUB_TOKEN: set
 [2/7] Ensuring GitHub sample repo 'devops-sample-code' + hello-world.sh
-  owner: shreyassridhar44
+  owner: sara-khurshida
   repo exists
   hello-world.sh already up to date
-  script: https://github.com/shreyassridhar44/devops-sample-code/blob/main/hello-world.sh
+  script: https://github.com/sara-khurshida/devops-sample-code-/blob/main/hello-world.sh
 [3/7] Preparing Jenkins (image ex8-jenkins)
   port 8080 is in use, trying 8081...
   NOTE: brief uses 8080, but it is taken on this host -> Jenkins UI on 8081
@@ -140,7 +140,7 @@ Real output from this machine (UI on 8081 because 8080 was taken):
 ============================================================
  Exercise 8 complete
 ============================================================
- Repo    : https://github.com/shreyassridhar44/devops-sample-code
+ Repo    : https://github.com/sara-khurshida/devops-sample-code-
  Script  : echo "Hello, Jenkins!"
  Job     : http://localhost:8081/job/HelloWorld   (Freestyle, Git SCM)
  Build   : #1 -> SUCCESS
@@ -210,7 +210,7 @@ curl -s -u admin:admin "http://localhost:8081/job/HelloWorld/lastBuild/consoleTe
 # Finished: SUCCESS
 
 # the script GitHub serves (via the API)
-curl -s https://raw.githubusercontent.com/shreyassridhar44/devops-sample-code/main/hello-world.sh
+curl -s https://raw.githubusercontent.com/sara-khurshida/devops-sample-code-/main/hello-world.sh
 # #!/bin/bash
 # echo "Hello, Jenkins!"
 ```

@@ -39,9 +39,9 @@ VOLUME_NAME="ex8_jenkins_home"
 JOB_NAME="HelloWorld"
 JOB_XML="$SCRIPT_DIR/job/HelloWorld-config.xml"
 
-REPO_NAME="devops-sample-code"
+REPO_NAME="devops-sample-code-"
 REPO_DESC="A demo repository for Jenkins scripting."
-FALLBACK_OWNER="shreyassridhar44"
+FALLBACK_OWNER="sara-khurshida"
 GITHUB_OWNER=""
 REPO_URL=""
 
@@ -157,7 +157,7 @@ CRUMB="$(curl -fsS -u admin:admin -c "$COOKIE_JAR" "$BASE_URL/crumbIssuer/api/xm
 
 # ------------------------------------------------------------- [6/7] create job
 echo "[6/7] Creating Freestyle job '${JOB_NAME}' (Git SCM + shell)"
-sed "s#https://github.com/[^/]*/devops-sample-code.git#${REPO_URL}#" "$JOB_XML" > "$RENDERED"
+sed "s#https://github.com/[^/]*/devops-sample-code-.git#${REPO_URL}#" "$JOB_XML" > "$RENDERED"
 if curl -fsS -o /dev/null -u admin:admin "${BASE_URL}/job/${JOB_NAME}/api/json" 2>/dev/null; then
   curl -fsS -o /dev/null -u admin:admin -b "$COOKIE_JAR" -H "$CRUMB" -X POST "${BASE_URL}/job/${JOB_NAME}/doDelete"
   echo "  removed previous job"
