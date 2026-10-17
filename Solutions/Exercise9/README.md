@@ -81,13 +81,13 @@ port from 8080 upward — if 8080 is taken it prints the actual Jenkins UI URL.
   docker: Docker version 29.6.1
   GITHUB_TOKEN: set
 [2/8] Ensuring GitHub sample repo 'devops-sample-code' + app + Jenkinsfile
-  owner: shreyassridhar44
+  owner: sara-khurshida
   repo exists
   app.py: already up to date
   requirements.txt: already up to date
   test_app.py: already up to date
   Jenkinsfile: already up to date
-  app: https://github.com/shreyassridhar44/devops-sample-code
+  app: https://github.com/sara-khurshida/devops-sample-code-
 [3/8] Preparing Jenkins (image ex9-jenkins)
   image built; UI -> 8081
 [4/8] Starting Jenkins (headless admin/admin)

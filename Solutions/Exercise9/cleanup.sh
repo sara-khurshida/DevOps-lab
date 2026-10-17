@@ -26,8 +26,8 @@ export PATH
 JENKINS_IMAGE="ex9-jenkins"
 CONTAINER_NAME="jenkins"
 VOLUME_NAME="ex9_jenkins_home"
-REPO_NAME="devops-sample-code"
-FALLBACK_OWNER="shreyassridhar44"
+REPO_NAME="devops-sample-code-"
+FALLBACK_OWNER="sara-khurshida"
 
 REMOVE_VOLUME=0
 REMOVE_IMAGE=0

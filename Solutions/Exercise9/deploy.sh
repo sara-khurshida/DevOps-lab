@@ -42,9 +42,9 @@ VOLUME_NAME="ex9_jenkins_home"
 JOB_NAME="Python-MultiStage-Pipeline"
 JOB_XML="$SCRIPT_DIR/job/Python-MultiStage-Pipeline-config.xml"
 
-REPO_NAME="devops-sample-code"
+REPO_NAME="devops-sample-code-"
 REPO_DESC="A demo repository for Jenkins scripting."
-FALLBACK_OWNER="shreyassridhar44"
+FALLBACK_OWNER="sara-khurshida"
 GITHUB_OWNER=""
 REPO_URL=""
 
@@ -180,7 +180,7 @@ CRUMB="$(curl -fsS -u admin:admin -c "$COOKIE_JAR" "$BASE_URL/crumbIssuer/api/xm
 
 # ------------------------------------------------------------- [6/8] create job
 echo "[6/8] Creating Pipeline job '${JOB_NAME}' (Pipeline script from SCM)"
-sed "s#https://github.com/[^/]*/devops-sample-code.git#${REPO_URL}#" "$JOB_XML" > "$RENDERED"
+sed "s#https://github.com/[^/]*/devops-sample-code-.git#${REPO_URL}#" "$JOB_XML" > "$RENDERED"
 if curl -fsS -o /dev/null -u admin:admin "${BASE_URL}/job/${JOB_NAME}/api/json" 2>/dev/null; then
   curl -fsS -o /dev/null -u admin:admin -b "$COOKIE_JAR" -H "$CRUMB" -X POST "${BASE_URL}/job/${JOB_NAME}/doDelete"
   echo "  removed previous job"
